@@ -97,3 +97,142 @@ for (let i = 0; i < points.length; i++) {
 
 // Add all markers to map
 map.addLayer(markers);
+
+// video overlay
+//let topleft_lat = 52.1574280151296, topleft_lng = 7.09265168046195 //top-left
+//let bottomright_lat = 50.77683578779813, bottomright_lng = 9.933662562842184 //bot-right
+
+let topleft_lat = 54.17529672404642, topleft_lng = -1.0107421875000002 //top-left
+let bottomright_lat = 47.14489748555398, bottomright_lng = 15.578613281250002 //bot-right
+
+
+const video = document.createElement('video');
+let videoUrl='';
+if (video.canPlayType('video/webm').length > 0) {
+    // WebM is supported
+    //videoUrl = './images/Dogs-11-sec-720p-GoPro-RGB16_00108000.webm';
+    videoUrl = './images/Dogs-Transparant-10sec-GoPro-RGB16-720p.webm';
+    
+} else {
+    videoUrl = './images/Dogs-Transparant-10sec-GoPro-RGB16-720p-1.mov';
+}
+
+
+
+const videoBounds = [[topleft_lat, topleft_lng], [bottomright_lat, bottomright_lng]]; // Define the bounds
+
+const videoOverlay = L.videoOverlay(videoUrl, videoBounds, {
+  opacity: 0.8,
+  interactive: true,
+  autoplay: true,
+  muted: true,
+  playsInline: true
+}).addTo(map);
+
+// add control button to enable video-overlay display on/off
+// Create a new control with a button
+var VideoControl = L.Control.extend({
+  onAdd: function() {
+    var button = L.DomUtil.create('button');
+    button.innerHTML = 'Video on/off';
+    button.style.background = 'white';
+    button.style.padding = '10px';
+
+    // When the button is clicked, toggle the video overlay
+    L.DomEvent.on(button, 'click', function() {
+      if (map.hasLayer(videoOverlay)) {
+        map.removeLayer(videoOverlay);
+      } else {
+        videoOverlay.addTo(map);
+        // Get the video element and manually play it
+        var video = videoOverlay.getElement();
+        video.play();
+      }
+    });
+
+    return button;
+  }
+});
+
+// Add the control to the map
+new VideoControl({ position: 'topright' }).addTo(map);
+
+
+
+//////////////////////////////////////
+///////// display location on click //
+//////////////////////////////////////
+// Add an event listener for the click event on the map
+/*
+map.on('click', function(e) {
+  // e.latlng contains the latitude and longitude of the clicked point
+  var lat = e.latlng.lat;
+  var lng = e.latlng.lng;
+
+  // You can do something with the coordinates here, like display them to the user
+  alert("You clicked the map at latitude: " + lat + " and longitude: " + lng);
+});
+*/
+
+
+///////////////////////////////////////
+///////////////////////////////////////
+
+// browser type detection
+// Opera
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+// Firefox
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+// Safari
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) {
+    return p.toString() === "[object SafariRemoteNotification]";
+})(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+// Internet Explorer
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+// Edge
+var isEdge = !isIE && !!window.StyleMedia;
+
+// Chrome
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+// Edge (based on Chromium)
+var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") !== -1);
+
+// Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+
+console.log(video.canPlayType('video/webm'))
+console.log(video.canPlayType('video/webm').length)
+console.log(videoUrl)
+
+const canPlay = {
+  mp4: video.canPlayType('video/mp4'),
+  ogg: video.canPlayType('video/ogg'),
+  webm: video.canPlayType('video/webm'),
+  mov: video.canPlayType('video/mov'),
+  avi: video.canPlayType('video/avi'),
+};
+
+console.log(canPlay);
+// outputs: { mp4: "maybe", ogg: "maybe", webm: "maybe", mov: "", avi: "" }
+
+//const videoUrl = './images/Cinnamon-21-720p.mov';
+//onst videoUrl = './images/Hudson-720p-goproCineForm-rgb-16bit-single00000000.webm';
+//const videoUrl = './images/Cinnamon-21-720p.wepm';
+
+
+
+// Example output
+console.log("Detecting browsers by duck-typing:");
+console.log("isFirefox:", isFirefox);
+console.log("isChrome:", isChrome);
+console.log("isSafari:", isSafari);
+console.log("isOpera:", isOpera);
+console.log("isIE:", isIE);
+
+
