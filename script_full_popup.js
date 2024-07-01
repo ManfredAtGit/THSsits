@@ -157,6 +157,16 @@ var VideoControl = L.Control.extend({
 // Add the control to the map
 new VideoControl({ position: 'topright' }).addTo(map);
 
+// automatically adjust videoBounds to zoom-level
+// Listen to the 'zoomend' event on the map and ajust videoOverlay bounds
+map.on('zoomend', function() {
+  // Get the current bounds of the map view
+  var bounds = map.getBounds();
+
+  // Set the bounds of the video overlay to the bounds of the map view
+  videoOverlay.setBounds(bounds);
+});
+
 
 
 //////////////////////////////////////
