@@ -24,3 +24,32 @@ body {
   padding: 0;
   background-color: #f1f1f1;
 }
+
+/* responsive container */
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* media query for popup content seizing */
+@media (max-width: 600px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* disable video display for popup video on mobile devices */
+@media (max-width: 600px) {
+  video {
+      width: 100%;
+      height: auto;
+  }
+  .no-display-on-mobile {
+      display: none;
+  }
+}

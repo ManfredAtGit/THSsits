@@ -57,7 +57,8 @@ let points = [
 ];
 
 // calling map
-const map = L.map("map", config).setView([lat, lng], zoom);
+// support for touch event : tap
+const map = L.map("map", {config, tap: true}).setView([lat, lng], zoom);
 
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
@@ -77,7 +78,7 @@ for (let i = 0; i < points.length; i++) {
 
   let html = `
         <h1> ${name}</h1>
-        <p>Sit bei ${hosts}:</p>
+        <p>Sit at ${hosts}:</p>
         <ul>
             <li>${dates}</li>
             <li>${pets}</li>
@@ -87,7 +88,7 @@ for (let i = 0; i < points.length; i++) {
         <p>Link to THS listing <a href=${ths_url} target=_blank>link</a></p>
         <img src=${img_file} style="width: 300px; height: auto; overflow: auto;">
         <p></p>
-        <video width="320" height="240" controls>
+        <video class="no-display-on-mobile" width="320" height="240" controls>
           <source src=${video_file} type="video/webm">
           <source src=${video_file} type="video/mov">
           Your browser does not support the video tag.
@@ -96,11 +97,13 @@ for (let i = 0; i < points.length; i++) {
 
   //<source src="./images/F&M-Kijkduin-720p-24fps-final.webm" type="video/webm">
   //html += '<img src=${img_file} "img_file/jpeg;base64, ' + encoded + '">'; 
-  let popup = L.popup({maxWidth: 2650})
+  // set maxwidth conditional on device width
+  let popup = L.popup({maxWidth: window.innerWidth > 600 ? 2650 : window.innerWidth - 20})
     .setContent(html);
   let marker = L.marker(new L.LatLng(lat, lng)).bindPopup(popup);
   markers.addLayer(marker);
 }
+
 
 // Add all markers to map
 map.addLayer(markers);
@@ -142,18 +145,20 @@ var VideoControl = L.Control.extend({
   onAdd: function() {
     var button = L.DomUtil.create('button');
     button.innerHTML = 'Video on/off';
-    button.style.background = 'white';
+    button.style.background = 'red'; // default when video is on
     button.style.padding = '10px';
 
     // When the button is clicked, toggle the video overlay
     L.DomEvent.on(button, 'click', function() {
       if (map.hasLayer(videoOverlay)) {
         map.removeLayer(videoOverlay);
+        button.style.background = 'green'; // change to green when video is off
       } else {
         videoOverlay.addTo(map);
         // Get the video element and manually play it
         var video = videoOverlay.getElement();
         video.play();
+        button.style.background = 'red'; // change to red when video is on
       }
     });
 
