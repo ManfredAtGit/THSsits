@@ -31,6 +31,10 @@ body {
   height: 100%;
 }
 
+ul {
+  padding-left: 20px; 
+}
+
 /* media query for popup content seizing */
 @media (max-width: 600px) {
   img {

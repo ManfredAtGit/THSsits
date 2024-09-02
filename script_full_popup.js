@@ -91,16 +91,15 @@ for (let i = 0; i < points.length; i++) {
   let showButton = video_file.length > 0;
 
   let html = `
-        <h1> ${name}</h1>
-        <p>Sit at ${hosts}:</p>
+        <h2> ${name}</h2>
+        <p>Sit for ${hosts}:</p>
         <ul>
             <li>${dates}</li>
             <li>${pets}</li>
         </ul>
-        </p>
-
+        
         <p>Link to THS listing <a href=${ths_url} target=_blank>link</a></p>
-        <img src=${img_file} style="width: 300px; height: auto; overflow: auto;">
+        <img src=${img_file} style="width: 200px; height: auto; overflow: auto;">
         <p></p>
         <!-- button onclick="myFunction('${video_file}')">Click Me!</button> -->
         <!-- <button onclick="onButtonClick">Click Button!</button> -->
@@ -128,7 +127,8 @@ function openNewPopup(lat,lng,filename,name) {
   <h1> ${name}</h1>
  
   <p></p>
-  <video class="no-display-on-mobile" width="320" height="240" controls>
+  <!-- <video class="no-display-on-mobile" width="320" height="240" controls> -->
+  <video width="320" height="240" controls>
     <source src=${filename} type="video/webm">
     <source src=${filename} type="video/mov">
     Your browser does not support the video tag.
