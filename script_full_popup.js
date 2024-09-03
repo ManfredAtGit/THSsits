@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /**
  * THS sit map
  * - each sit represented by one marker on map
