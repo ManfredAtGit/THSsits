@@ -104,14 +104,14 @@ for (let i = 0; i < points.length; i++) {
         <!-- <button onclick="onButtonClick">Click Button!</button> -->
         <!-- <button onclick="openNewPopup(${lat},${lng},'${video_file}','${name}')">Click Button!</button> -->
 
-        ${showButton ? `<button onclick="openNewPopup(${lat},${lng},'${video_file}','${name}')">Show slide show</button>` : ''}
+        ${showButton ? `<button onclick="openNewWindow(${lat},${lng},'${video_file}','${name}')">Show slide show</button>` : ''}
     `;
 
   //<source src="./images/F&M-Kijkduin-720p-24fps-final.webm" type="video/webm">
   //html += '<img src=${img_file} "img_file/jpeg;base64, ' + encoded + '">'; 
 
   // set maxwidth conditional on device width
-  let popup = L.popup({maxWidth: window.innerWidth > 600 ? 2650 : window.innerWidth - 20})
+  let popup = L.popup({ maxWidth: window.innerWidth > 600 ? 2650 : window.innerWidth - 20 })
     .setContent(html);
   let marker = L.marker(new L.LatLng(lat, lng)).bindPopup(popup);
   markers.addLayer(marker);
@@ -120,25 +120,53 @@ for (let i = 0; i < points.length; i++) {
 ////////////////////////////////////////////////////////////////
 // Function to open a new popup with video player for video_file
 ////////////////////////////////////////////////////////////////
-function openNewPopup(lat,lng,filename,name) {
+function openNewPopup(lat, lng, filename, name) {
 
   let html = `
-  <h1> ${name}</h1>
- 
-  <p></p>
-  <!-- <video class="no-display-on-mobile" width="320" height="240" controls> -->
-  <video width="320" height="240" controls>
-    <source src=${filename} type="video/webm">
-    <source src=${filename} type="video/mov">
-    Your browser does not support the video tag.
-  </video>
-  `;
+    <h1> ${name}</h1>
+  
+    <p></p>
+    <!-- <video class="no-display-on-mobile" width="320" height="240" controls> -->
+    <video width="320" height="240" controls>
+      <source src=${filename} type="video/webm">
+      <source src=${filename} type="video/mov">
+      Your browser does not support the video tag.
+    </video>
+    `;
 
-  var newPopupContent = 'This is the new popup content! '+lat.toString()+ ' - ' +lng.toString() +' - ' +filename;
+  var newPopupContent = 'This is the new popup content! ' + lat.toString() + ' - ' + lng.toString() + ' - ' + filename;
   var newPopup = L.popup()
     .setLatLng([lat, lng])
     .setContent(html)
     .openOn(map);
+}
+
+////////////////////////////////////////////////////////////////
+// Function to open a new tab/window with video player for video_file
+////////////////////////////////////////////////////////////////
+function openNewWindow(lat,lng,filename,name) {
+  var newWindow = window.open('', '_blank');
+
+  let html = `
+    <h1> ${name}</h1>
+  
+    <p></p>
+    <!-- <video class="no-display-on-mobile" width="320" height="240" controls> -->
+    <!-- <video width="320" height="240" controls> -->
+    <video controls>
+      <source src=${filename} type="video/webm">
+      <source src=${filename} type="video/mov">
+      Your browser does not support the video tag.
+    </video>
+    `;
+
+
+  if (newWindow) {
+      newWindow.document.write(html);
+      newWindow.document.close();
+  } else {
+      alert('Please allow popups for this website');
+  }
 }
 
 
