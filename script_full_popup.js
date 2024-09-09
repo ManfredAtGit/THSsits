@@ -54,7 +54,7 @@ let points = [
   [7.528425592260216,50.373084982444205,"Koblenz","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/rheinland-pfalz/koblenz/l/581748/","Stefan&Dominique","Martha, Lea, Lara, and more","Oct 22",1,"./images/Koblenz_Icon.jpg","./images/THSlogo-transparent-720p-H265.mov"],
   [8.881426054304299,53.08460824385044,"Bremen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/bremen/bremen/","Katherine","Gloria","Nov 21",1,"./images/Katherine.jpg",""],
   [5.835588687379251,51.9570314931211,"Arnhem","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/gelderland/arnhem/l/511473/","Liz&Neil","Bismarck&Boefje","Dec 23",1,"./images/Arnhem.jpg",""],
-  [4.945341738516996,52.37470856181347,"Amsterdam","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/north-holland/amsterdam/l/1164792/","Josh&Kevin","Jett,Louie,Wilhelmina,Henry","Dec 23",1,"./images/Amsterdam.jpg",""],
+  [4.945341738516996,52.37470856181347,"Amsterdam","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/north-holland/amsterdam/l/1164792/","Josh&Kevin","Jett,Louie,Wilhelmina,Henry","Dec 23",1,"./images/Amsterdam.jpg","./images/THS-Amsterdam-720-medium_VP8.webm"],
   [4.240792746350671,52.07207454100266,"Scheveningen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/scheveningen/l/615972/","David&Joanna","Floky","Feb 24",1,"./images/Scheveningen.jpg","./images/F&M-Kijkduin-720p-24fps-final.webm"],
   [7.623173354069206,51.49613653790669,"Holzwickede","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/north-rhine-westphalia/holzwickede/l/540195/","Casey&Stefan","Hudson","Feb 24",1,"./images/Holzwickede.jpg",""],
   [3.206915665039187,51.33188066710052,"Zeebrugge","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/belgium/flanders/zeebrugge/l/804559/","Eve&Thomas","Mila&Sam","Ap 24",1,"./images/Zeebrugge.jpg","./images/THS-Zeebrugge-720-24-medium_VP8.webm"],
@@ -153,7 +153,7 @@ function openNewWindow(lat,lng,filename,name) {
     <p></p>
     <!-- <video class="no-display-on-mobile" width="320" height="240" controls> -->
     <!-- <video width="320" height="240" controls> -->
-    <video controls>
+    <video id="myVideo" controls>
       <source src=${filename} type="video/webm">
       <source src=${filename} type="video/mov">
       Your browser does not support the video tag.
@@ -164,9 +164,20 @@ function openNewWindow(lat,lng,filename,name) {
   if (newWindow) {
       newWindow.document.write(html);
       newWindow.document.close();
+      /*
+      const video = document.getElementById('myVideo');
+      const speedControl = document.getElementById('speedControl');
+    
+      speedControl.addEventListener('change', function() {
+        video.playbackRate = this.value;
+      });
+      */
   } else {
       alert('Please allow popups for this website');
   }
+
+  // add speed control 
+
 }
 
 
