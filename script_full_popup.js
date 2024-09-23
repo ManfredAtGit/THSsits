@@ -53,7 +53,7 @@ let points = [
   [9.149564426819298,51.48628495389147,"Warburg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/north-rhine-westphalia/warburg/l/682706/","Geraldine","Suri, Pico, Angel, Birds","Aug 22",1,"./images/Warburg.jpg","./images/THS-Warburg-720-medium_VP8.webm"],
   [7.528425592260216,50.373084982444205,"Koblenz","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/rheinland-pfalz/koblenz/l/581748/","Stefan&Dominique","Martha, Lea, Lara, and more","Oct 22",1,"./images/Koblenz_Icon.jpg","./images/THSlogo-transparent-720p-H265.mov"],
   [8.881426054304299,53.08460824385044,"Bremen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/bremen/bremen/","Katherine","Bella","Nov 21",1,"./images/Katherine.jpg","./images/THS-Bremen-720-medium_VP8.webm"],
-  [5.835588687379251,51.9570314931211,"Arnhem","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/gelderland/arnhem/l/511473/","Liz&Neil","Bismarck&Boefje","Dec 23",1,"./images/Arnhem.jpg","./images/THS-Arnheim-720-medium_VP8.webm"],
+  [5.835588687379251,51.9570314931211,"Arnhem","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/gelderland/arnhem/l/511473/","Liz&Neil","Bismarck&Boefje","Dec 23",1,"./images/Arnhem.jpg","./images/THS-Arnheim-Butterflies-720-medium_VP8.webm"],
   [4.945341738516996,52.37470856181347,"Amsterdam","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/north-holland/amsterdam/l/1164792/","Josh&Kevin","Jett,Louie,Wilhelmina,Henry","Dec 23",1,"./images/Amsterdam.jpg","./images/THS-Amsterdam-720-medium_VP8.webm"],
   [4.240792746350671,52.07207454100266,"Scheveningen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/scheveningen/l/615972/","David&Joanna","Floky","Feb 24",1,"./images/Scheveningen.jpg","./images/F&M-Kijkduin-720p-24fps-final.webm"],
   [7.623173354069206,51.49613653790669,"Holzwickede","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/north-rhine-westphalia/holzwickede/l/540195/","Casey&Stefan","Hudson","Feb 24",1,"./images/Holzwickede.jpg",""],
@@ -148,17 +148,29 @@ function openNewWindow(lat,lng,filename,name) {
   var newWindow = window.open('', '_blank');
 
   let html = `
-    <h1> ${name}</h1>
-  
+    <title>${name}</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+      }
+      video {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+    <!-- <h1>${name}</h1> -->
     <p></p>
-    <!-- <video class="no-display-on-mobile" width="320" height="240" controls> -->
-    <!-- <video width="320" height="240" controls> -->
     <video id="myVideo" controls>
-      <source src=${filename} type="video/webm">
-      <source src=${filename} type="video/mov">
+      <source src="${filename}" type="video/webm">
+      <source src="${filename}" type="video/mov">
       Your browser does not support the video tag.
     </video>
-    `;
+  `;
 
 
   if (newWindow) {
