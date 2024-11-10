@@ -58,9 +58,11 @@ let points = [
   [4.240792746350671,52.07207454100266,"Scheveningen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/scheveningen/l/615972/","David&Joanna","Floky","Feb 24",1,"./images/Scheveningen.jpg","./images/F&M-Kijkduin-720p-24fps-final.webm"],
   [7.623173354069206,51.49613653790669,"Holzwickede","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/north-rhine-westphalia/holzwickede/l/540195/","Casey&Stefan","Hudson","Feb 24",1,"./images/Holzwickede.jpg",""],
   [3.206915665039187,51.33188066710052,"Zeebrugge","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/belgium/flanders/zeebrugge/l/804559/","Eve&Thomas","Mila&Sam","Ap 24",1,"./images/Zeebrugge.jpg","./images/THS-Zeebrugge-720-24-medium_VP8.webm"],
-  [-2.3996494033252302,48.3645661836332,"Plenee-Jugon","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/france/brittany/plenee-jugon/l/232436/","Ron&Judi","Alpaka-Gang","Jul 24",0,"./images/RonJudi.jpg","./images/THSvideo-Plenee_VP8.webm"],
-  [4.401146346131438,52.13865411534486,"Wassenaar","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/wassenaar/l/1300300/","Corrine","Wrigley,Wuffles,Bean,Leo","Oct 24",0,"./images/Corrine.jpg",""],
-  [6.138636792194074,49.600554456269876,"Luxembourg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/luxembourg/luxembourg/luxembourg/l/1194572/","Elisabetta&Marco","Speck","Jul 24",0,"./images/Elisabetta-Marco.jpg","./images/THS-Lux-720-medium_VP8.webm"]
+  [-2.3996494033252302,48.3645661836332,"Plenee-Jugon","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/france/brittany/plenee-jugon/l/232436/","Ron&Judi","Alpaka-Gang","Jul 24",1,"./images/RonJudi.jpg","./images/THSvideo-Plenee_VP8.webm"],
+  [4.401146346131438,52.13865411534486,"Wassenaar","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/wassenaar/l/1300300/","Corrine","Wrigley,Wuffles,Bean,Leo","Oct 24",1,"./images/Wrigley-1.jpg","./images/THS-Corrine-720_VP8.webm"],
+  [8.470092875984855,53.10715784312104,"Hude","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/lower-saxony/hude/l/634606/","Annette&Lars","Purzel,Gina,Granny","Nov 24",0,"./images/Hude.jpg",""],
+  [11.336979083424398,48.003508502604475,"Starnberg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/bavaria/starnberg/l/2157284/","Leigh","Charlotte,Luigi","Dec 24",0,"./images/Leigh.jpg",""],
+  [6.138636792194074,49.600554456269876,"Luxembourg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/luxembourg/luxembourg/luxembourg/l/1194572/","Elisabetta&Marco","Speck","Jul 24",1,"./images/Elisabetta-Marco.jpg","./images/THS-Lux-720-medium_VP8.webm"]
 ];
 
 // calling map
