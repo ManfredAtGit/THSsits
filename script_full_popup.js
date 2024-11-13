@@ -60,8 +60,8 @@ let points = [
   [3.206915665039187,51.33188066710052,"Zeebrugge","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/belgium/flanders/zeebrugge/l/804559/","Eve&Thomas","Mila&Sam","Ap 24",1,"./images/Zeebrugge.jpg","./images/THS-Zeebrugge-720-24-medium_VP8.webm"],
   [-2.3996494033252302,48.3645661836332,"Plenee-Jugon","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/france/brittany/plenee-jugon/l/232436/","Ron&Judi","Alpaka-Gang","Jul 24",1,"./images/RonJudi.jpg","./images/THSvideo-Plenee_VP8.webm"],
   [4.401146346131438,52.13865411534486,"Wassenaar","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/wassenaar/l/1300300/","Corrine","Wrigley,Wuffles,Bean,Leo","Oct 24",1,"./images/Wrigley-1.jpg","./images/THS-Corrine-720_VP8.webm"],
-  [8.470092875984855,53.10715784312104,"Hude","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/lower-saxony/hude/l/634606/","Annette&Lars","Purzel,Gina,Granny","Nov 24",0,"./images/Hude.jpg",""],
-  [11.336979083424398,48.003508502604475,"Starnberg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/bavaria/starnberg/l/2157284/","Leigh","Charlotte,Luigi","Dec 24",0,"./images/Leigh.jpg",""],
+  [8.470092875984855,53.10715784312104,"Hude","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/lower-saxony/hude/l/634606/","Annette&Lars","Purzel,Gina,Granny","Nov 24",0,"./images/THSlogo.jpg",""],
+  [11.336979083424398,48.003508502604475,"Starnberg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/bavaria/starnberg/l/2157284/","Leigh","Charlotte,Luigi","Dec 24",0,"./images/THSlogo.jpg",""],
   [6.138636792194074,49.600554456269876,"Luxembourg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/luxembourg/luxembourg/luxembourg/l/1194572/","Elisabetta&Marco","Speck","Jul 24",1,"./images/Elisabetta-Marco.jpg","./images/THS-Lux-720-medium_VP8.webm"]
 ];
 
