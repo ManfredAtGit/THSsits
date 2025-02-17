@@ -15,3 +15,6 @@ In addition, the popup may contain a link to a slide show or video produced for 
 - leaflet and javascript
 - OSM
 - Davinci Resolve for video editing
+
+# view web app:
+[click to view app on github-pages](https://manfredatgit.github.io/THSsits/)

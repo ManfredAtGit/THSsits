@@ -63,7 +63,7 @@ let points = [
   [8.470092875984855,53.10715784312104,"Hude","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/lower-saxony/hude/l/634606/","Annette&Lars","Purzel,Gina,Granny","Nov 24",1,"./images/Hude.jpg","./images/THS-Hude-720-576_VP8.webm"],
   [11.336979083424398,48.003508502604475,"Starnberg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/bavaria/starnberg/l/2157284/","Leigh","Charlotte,Luigi","Dec 24",1,"./images/Luigi-small.png","./images/THS-Starnberg-720-576_VP8.webm"],
   [6.138636792194074,49.600554456269876,"Luxembourg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/luxembourg/luxembourg/luxembourg/l/1194572/","Elisabetta&Marco","Speck","Jul 24",1,"./images/Elisabetta-Marco.jpg","./images/THS-Lux-720-medium_VP8.webm"],
-  [12.983865888961137,52.34010993496667,"Potsdam","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/brandenburg/potsdam/l/1666652/","Benjamin","Remy, Fred, Sharky, Sumi, Arkaya, Ringo","Feb 25",0,"./images/THS-Potsdam-small.jpg",""]
+  [12.983865888961137,52.34010993496667,"Potsdam","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/brandenburg/potsdam/l/1666652/","Benjamin","Remy, Fred, Sharky, Sumi, Fuchsi, Ringo","Feb 25",1,"./images/THS-Potsdam-small.jpg","./images/THS-Potsdam-720-Clipchamp_VP9.webm"]
 ];
 
 // calling map
