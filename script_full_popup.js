@@ -66,8 +66,9 @@ let points = [
   [12.983865888961137,52.34010993496667,"Potsdam","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/germany/brandenburg/potsdam/l/1666652/","Benjamin","Remy, Fred, Sharky, Sumi, Fuchsi, Ringo","Feb 25",1,"./images/THS-Potsdam-small.jpg","./images/THS-Potsdam-720-Clipchamp_VP9.webm"],
   [3.7133275823499545,50.80089701747565,"Zegelsem","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/belgium/flanders/zegelsem/l/1312053/","Denise&Joel","Oilily, Lizzy, Jade, Jack, Lilly, Nobu, Vegas, Cielo, Bunny","Apr 25",1,"./images/Zeg-oililie-donk1-5-sq-1.jpg","./images/THS-Zegelsem-720x576-24fps-medium_VP9.webm"],
   [13.03346580457467,47.81401470715083,"Salzburg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/austria/salzburg/salzburg/l/2154547/","James&Toni","Lucy","Jun 25",1,"./images/Lucy-3.jpg","./images/THS-Salzburg-720pal-24fps_VP9.webm"],
-  [-1.9324919207252957,50.70157204101405,"Poole","https://www.https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-kingdom/england/poole/l/1169749/","Richard","Tiffin","Aug 25",0,"./images/THSlogo-transparent-720p.webm",""],
-  [1.1340250182049334,51.37128935289594,"Herne-Bay","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-kingdom/england/herne-bay/l/2016833/","George","Kali","Aug 25",0,"./images/THSlogo-transparent-720p.webm",""]
+  [-1.9324919207252957,50.70157204101405,"Poole","https://www.https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-kingdom/england/poole/l/1169749/","Richard&Jane","Tiffin","Aug 25",1,"./images/Tiffin.webp","./images/THS-Canford-720-24_VP9.webm"],
+  [1.1340250182049334,51.37128935289594,"Herne-Bay","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-kingdom/england/herne-bay/l/2016833/","George&Karen","Kali","Aug 25",1,"./images/THSlogo-transparent-720p.webm",""],
+  [12.45499543972254,55.67453836545662,"Kopenhagen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/denmark/capital-region/copenhagen/l/2340365/","Eddie","Chester","2025",0,"./images/THSlogo-transparent-720p.webm",""]
 ];
 
 // calling map
