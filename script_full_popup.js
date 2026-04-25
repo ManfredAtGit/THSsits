@@ -68,7 +68,8 @@ let points = [
   [13.03346580457467,47.81401470715083,"Salzburg","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/austria/salzburg/salzburg/l/2154547/","James&Toni","Lucy","Jun 25",1,"./images/Lucy-3.jpg","./images/THS-Salzburg-720pal-24fps_VP8.webm"],
   [-1.9324919207252957,50.70157204101405,"Poole","https://www.https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-kingdom/england/poole/l/1169749/","Richard&Jane","Tiffin","Aug 25",1,"./images/Tiffin.webp","./images/THS-Canford-720_VP9.webm"],
   [1.1340250182049334,51.37128935289594,"Herne-Bay","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-kingdom/england/herne-bay/l/2016833/","George&Karen","Kali","Aug 25",1,"./images/THS-Kali.jpeg","./images/THS-HerneBay-720_VP8.webm"],
-  [12.45499543972254,55.67453836545662,"Kopenhagen","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/denmark/capital-region/copenhagen/l/2340365/","Eddie","Chester","2025",0,"./images/THSlogo-transparent-720p.webm",""]
+  [4.391548960085559,52.13799662685095,"Wassenaar","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/netherlands/south-holland/wassenaar/l/525404/","Leslie","Sunny & Cleo","Feb 2026",1,"./images/Wassenaar-Cleo.jpeg",""],
+  [7.077154630265901,47.4226793957065,"Porrentruy","https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/switzerland/jura/porrentruy/l/620450/","Walt&Daniel","Mac, Aodhan, Alfi, Aoife,Keir","Apr 26",1,"./images/Walt&Daniel.jpeg","./images/THS-Porrentruy_720_VP8.webm"]
 ];
 
 // calling map
